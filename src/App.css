@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color1h: 138;
+  --color1s: 30%;
+  --color1l: 30%;
+
+  --color2: rgb(255, 241, 223);
+}
+
+#quote-box {
+  border: 2px black solid;
+  max-width: 550px;
+  max-height: 30vh;
+  margin: 35vh auto 40vh auto;
+  background-color: var(--color2);
+}
+
+#quote-box > * {
+  padding: 15px;
+}
+
+#document-bg {
+  position: fixed;
+  background-color: hsl(var(--color1h), var(--color1s), var(--color1l));
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  transition: background-color 1s ease;
+}
+
+#text {
+  font-family: Georgia;
+  font-size: 23px;
+  margin: 10px 10px 3px 10px;
+  text-align: center;
+  color: hsl(var(--color1h), var(--color1s), var(--color1l));
+  transition: color 1s ease, opacity 1s ease;
+}
+#text.fade {
+  opacity: 0;
+}
+
+#author {
+  font-family: Helvetica;
+  font-size: 15px;
+  text-align: right;
+  margin-right: 15px;
+  transition: opacity 1s ease;
+}
+#author.fade {
+  opacity: 0;
+}
+
+#button-array {
+  margin: 10px;
+  margin-top: 0;
+  padding-top: 5px;
+}
+
+.buttonSet1 {
+  color: hsl(var(--color1h), var(--color1s), var(--color1l));
+  margin: 2px;
+  transition: color 1s ease;
+}
+
+.buttonSet1:visited {
+  color: hsl(var(--color1h), var(--color1s), var(--color1l));
+  transition: color 1s ease;
+}
+
+.buttonSet1:hover {
+  filter: brightness(1.1);
+}
+
+#new-quote {
+  position: relative;
+  left: 62%;
+  user-select: none;
+  cursor: pointer;
+}
